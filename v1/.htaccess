@@ -1,0 +1,10 @@
+# Don't edit this file! It is automatically generated
+AuthType Basic
+AuthName "Cacti API v1"
+AuthUserFile /dev/null
+Require valid-user
+RewriteEngine On
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule ^(.*)$ index.php/$1
+
+ErrorDocument 401 /cacti/plugins/api/error.php 
