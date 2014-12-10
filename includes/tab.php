@@ -162,7 +162,8 @@ function api_update_access(){
 			$htps[] = $row["user_id"]."x".$row["api_key_id"].":".crypt($row["api_key"], base64_encode($row["api_key"]));
 		}
 	}
-	$htpf = realpath(dirname(realpath(__FILE__))."/../v1/.htpasswd");
+	//$htpf = realpath(dirname(realpath(__FILE__))."/../v1/.htpasswd");
+	$htpf = dirname(realpath(__FILE__))."/../v1/.htpasswd";
 	$htaf = dirname(realpath(__FILE__))."/../v1/.htaccess";
 
 	$f = fopen($htpf,"w+");
